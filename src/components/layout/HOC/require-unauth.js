@@ -40,7 +40,7 @@ export default function (WrappedComponent) {
       return !isAuthorized ? (
         <WrappedComponent {...this.props} />
       ) : (
-        <Redirect to={(prevUrl && (prevUrl.length > 1)) ? prevUrl : "/page1"} />
+        <Redirect to={(prevUrl && (prevUrl.length > 1)) ? prevUrl : "/items"} />
       );
     }
   }
