@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import classnames from 'classnames';
-import { push } from "connected-react-router";
 
 import SingleItem from "./SingleItem/SingleItem";
 import ItemForm from "../../ui/ItemForm/ItemForm";

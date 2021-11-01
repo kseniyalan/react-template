@@ -1,6 +1,6 @@
 /* EXAMPLE OF REST-API CONNECTION */
 import axios from "axios";
-import qs from "qs";
+//import qs from "qs";
 import config from "./config";
 
 let domain;
@@ -49,15 +49,6 @@ export const getItemsList = async (token, payload) => {
     {id: 1, name: 'Item 2', color: 'Green'},
   ]
   return response;
-};
-
-export const getSingleItemInfo = async (token, itemId) => {
-  /*
-  const response = await ax.get('/items/' + itemId, {
-    headers: { token }
-  });
-  */
-  return true;
 };
 
 //Server side emulation

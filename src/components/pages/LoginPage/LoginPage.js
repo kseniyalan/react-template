@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import classnames from 'classnames';
 
-import { tempSignIn, signInAsync, clearServerErrors } from '../../../redux/actions/auth';
+import { tempSignIn, clearServerErrors } from '../../../redux/actions/auth';
 
 import RequireUnauth from "../../layout/HOC/require-unauth";
 

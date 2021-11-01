@@ -79,9 +79,12 @@ const creationSuccess = item => ({
   payload: { item }
 });
 
+//For real server-side
+/*
 const creationFailure = () => ({
   type: ITEM_CREATION_FAILED,
 });
+*/
 
 export const createItemAsync = () => {
   return async (dispatch, getState) => {

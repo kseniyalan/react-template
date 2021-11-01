@@ -6,7 +6,7 @@ import { Sidebar } from "semantic-ui-react";
 import Modal from "../../ui/ModalWindow/ModalWindow";
 import "./Sidebar.scss";
 
-import { tempSignOutAndClose, signOut } from '../../../redux/actions/auth';
+import { tempSignOutAndClose } from '../../../redux/actions/auth';
 import { openCancelModal, closeCancelModal } from "../../../redux/actions/ui";
 
 const mapStateToProps = state => ({
@@ -28,11 +28,6 @@ class SidebarBlock extends Component {
     closeCancelModal: PropTypes.func.isRequired,
     openCancelModal: PropTypes.func.isRequired,
   };
-
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
     const { cancelModal, openCancelModal, closeCancelModal, logOut } = this.props;
