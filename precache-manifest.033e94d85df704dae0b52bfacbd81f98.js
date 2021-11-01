@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-template/static/media/outline-icons.701ae6ab.eot"
   },
   {
-    "revision": "40ee3c84529f7f44b288",
+    "revision": "8ffee52289c7f2ff72df",
     "url": "/react-template/static/css/main.ad5404f4.chunk.css"
   },
   {
@@ -24,10 +24,6 @@ self.__precacheManifest = [
     "url": "/react-template/static/media/smile.320e2461.svg"
   },
   {
-    "revision": "2e8ee9fa34152c002ef4545adde7bef2",
-    "url": "/react-template/static/media/ok.2e8ee9fa.svg"
-  },
-  {
     "revision": "7c39753232dde22483e9c0bf02a80a20",
     "url": "/react-template/static/media/warning.7c397532.svg"
   },
@@ -36,28 +32,36 @@ self.__precacheManifest = [
     "url": "/react-template/static/media/close.e4dd0894.svg"
   },
   {
-    "revision": "0ab54153eeeca0ce03978cc463b257f7",
-    "url": "/react-template/static/media/icons.0ab54153.woff2"
+    "revision": "2e8ee9fa34152c002ef4545adde7bef2",
+    "url": "/react-template/static/media/ok.2e8ee9fa.svg"
+  },
+  {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/react-template/static/media/flags.9c74e172.png"
   },
   {
     "revision": "8e3c7f5520f5ae906c6cf6d7f3ddcd19",
     "url": "/react-template/static/media/icons.8e3c7f55.eot"
   },
   {
+    "revision": "0ab54153eeeca0ce03978cc463b257f7",
+    "url": "/react-template/static/media/icons.0ab54153.woff2"
+  },
+  {
     "revision": "faff92145777a3cbaf8e7367b4807987",
     "url": "/react-template/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
-    "url": "/react-template/static/media/icons.b87b9ba5.ttf"
-  },
-  {
-    "revision": "40ee3c84529f7f44b288",
-    "url": "/react-template/static/js/main.76e4e57a.chunk.js"
+    "revision": "8ffee52289c7f2ff72df",
+    "url": "/react-template/static/js/main.4f550ce5.chunk.js"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
     "url": "/react-template/static/media/outline-icons.cd6c777f.woff2"
+  },
+  {
+    "revision": "b87b9ba532ace76ae9f6edfe9f72ded2",
+    "url": "/react-template/static/media/icons.b87b9ba5.ttf"
   },
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
@@ -92,15 +96,11 @@ self.__precacheManifest = [
     "url": "/react-template/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/react-template/static/media/flags.9c74e172.png"
-  },
-  {
     "revision": "420d718d36030a922894",
     "url": "/react-template/static/css/2.07fe2617.chunk.css"
   },
   {
-    "revision": "f2433af683cc7d9bff199d7d7079f9ea",
+    "revision": "fedfd5fda1ef6fc93f17922bee1ad3f8",
     "url": "/react-template/index.html"
   }
 ];
