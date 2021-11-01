@@ -49,7 +49,7 @@ class ItemInfo extends Component {
               <div className="title-wrap">
                 <h1 className="page-title">{item.name}</h1>
               </div>
-              <div className="item-color">Color: {item.color}</div>
+              <div className="item-info">Color: {item.color}</div>
             </div>
           </React.Fragment>
         ) : false}
