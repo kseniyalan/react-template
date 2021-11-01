@@ -45,8 +45,8 @@ export const getItemsList = async (token, payload) => {
   */
   //Server side emulation
   const response = [
-    {id: 1, name: 'Item 1', color: 'Yellow'},
-    {id: 2, name: 'Item 2', color: 'Yellow'},
+    {id: 0, name: 'Item 1', color: 'Yellow'},
+    {id: 1, name: 'Item 2', color: 'Green'},
   ]
   return response;
 };
@@ -57,12 +57,7 @@ export const getSingleItemInfo = async (token, itemId) => {
     headers: { token }
   });
   */
-  const response = {
-    id: 1,
-    name: 'Item 1',
-    color: 'Yellow'
-  }
-  return response;
+  return true;
 };
 
 //Server side emulation

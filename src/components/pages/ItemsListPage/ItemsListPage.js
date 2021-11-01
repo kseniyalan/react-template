@@ -14,6 +14,7 @@ import "./ItemsListPage.scss";
 import {
   getItemsListAsync,
   createItemAsync,
+  openItemPage,
 } from "../../../redux/actions/itemsList";
 
 const mapStateToProps = state => ({
@@ -22,7 +23,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   getItemsList: payload => dispatch(getItemsListAsync(payload)),
-  onClickItem: itemId => dispatch(push(`/item/${itemId}`)),
+  onClickItem: item => dispatch(openItemPage(item)),
   onCreateItem: () => dispatch(createItemAsync()),
 });
 
@@ -31,6 +32,7 @@ class ItemsListPage extends Component {
     ready: PropTypes.bool.isRequired,
     loading: PropTypes.bool.isRequired,
     items: PropTypes.array.isRequired,
+    newItem: PropTypes.object.isRequired,
     onCreateItem: PropTypes.func.isRequired,
     getItemsList: PropTypes.func.isRequired,
     onClickItem: PropTypes.func.isRequired,
@@ -55,25 +57,23 @@ class ItemsListPage extends Component {
     );
   }
   render() {
-    const { ready, loading, items, onCreateItem } = this.props;
+    const { ready, loading, items, newItem, onCreateItem } = this.props;
 
     const contentClass = classnames({
       'page-content': true,
+      'forms': true,
       'hollow': items.length === 0,
     });
 
     return (
       <div className="page-wrapper">
-        <div className="page-header">
-          <button type="button" className="btn btn-green" onClick={() => onCreateItem()}>Create item</button>
-        </div>
         {ready ? (
           <React.Fragment>
 
             <div className={contentClass}>
               <div className="form-header">Add new item</div>
               <ItemForm
-                item={item}
+                item={newItem}
                 submitText="Add"
                 onSubmit={() => onCreateItem()}
               />

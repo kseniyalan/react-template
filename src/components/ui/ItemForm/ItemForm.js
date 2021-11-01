@@ -7,7 +7,7 @@ import InputCounter from "../InputCounter/InputCounter";
 import {
   setItemName,
   setItemColor,
-} from '../../../redux/actions/editItem';
+} from '../../../redux/actions/itemsList';
 
 const mapDispatchToProps = dispatch => ({
   setItemName: value => dispatch(setItemName(value)),
@@ -34,7 +34,10 @@ class ItemForm extends Component {
     const { onSubmit } = this.props;
     const validationError = this.validateForm();
     this.setState({ formWasSent: true });
-    if (!validationError) onSubmit();
+    if (!validationError) {
+      this.setState({ formWasSent: false });
+      onSubmit();
+    } 
   }
 
   validateForm = () => {

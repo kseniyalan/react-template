@@ -7,15 +7,12 @@ import Spinner from "../../ui/Spinner/Spinner";
 import RequireAuth from "../../layout/HOC/require-auth";
 import "./ItemInfo.scss";
 
-import { getItemInfoAsync } from "../../../redux/actions/itemInfo";
-
 const mapStateToProps = state => ({
   ...state.itemInfo,
 });
 
 const mapDispatchToProps = dispatch => ({
   onGoBack: () => dispatch(push('/items')),
-  getItemInfo: itemId => dispatch(getItemInfoAsync(itemId)),
 });
 
 class ItemInfo extends Component {
@@ -24,14 +21,16 @@ class ItemInfo extends Component {
     loading: PropTypes.bool.isRequired,
     item: PropTypes.object.isRequired,
     onGoBack: PropTypes.func.isRequired,
-    getItemInfo: PropTypes.func.isRequired,
   };
 
+  //For real server-ышву
+  /*
   componentDidMount() {
     const { getItemInfo } = this.props;
     const itemId= this.props.match.params.itemId;
     getItemInfo(itemId);
   }
+  */
 
   render() {
     const { ready, loading, item, onGoBack } = this.props;
@@ -50,6 +49,7 @@ class ItemInfo extends Component {
               <div className="title-wrap">
                 <h1 className="page-title">{item.name}</h1>
               </div>
+              <div className="item-color">Color: {item.color}</div>
             </div>
           </React.Fragment>
         ) : false}

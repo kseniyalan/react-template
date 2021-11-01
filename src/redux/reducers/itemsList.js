@@ -6,21 +6,16 @@ import {
   //Create new item
   SET_ITEM_NAME,
   SET_ITEM_COLOR,
-  ITEM_CREATION_START,
   ITEM_CREATED_SUCCESSFULLY,
-  ITEM_CREATION_FAILED,
 } from '../actions/itemsList';
 
 import { TEMP_SIGN_OUT } from '../actions/auth';
-/* Server side emulation */
-import { ITEM_CREATED_SUCCESSFULLY } from '../actions/editItem';
 
 const INITIAL_STATE = {
   ready: false,
   loading: false,
   items: [],
   newItem: {
-    id: 0,
     name: '',
     color: '',
   },
@@ -65,6 +60,10 @@ export default function (state = INITIAL_STATE, action) {
     case ITEM_CREATED_SUCCESSFULLY:
       return update(state, {
         items: { $push: [action.payload.item] },
+        newItem: {
+          name: { $set: '' },
+          color: { $set: '' },
+        },
       });
     case TEMP_SIGN_OUT:
       return INITIAL_STATE;

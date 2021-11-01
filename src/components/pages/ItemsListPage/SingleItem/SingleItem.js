@@ -13,7 +13,7 @@ class SingleItem extends Component {
     const { item, onClickItem } = this.props;
 
     return (
-      <div className="row" onClick={() => onClickItem(item.id)}>
+      <div className="row" onClick={() => onClickItem(item)}>
         <div className="cols-wrap">
         <div className="col item-name">{item.name}</div>
         <div className="col item-color">{item.color}</div>

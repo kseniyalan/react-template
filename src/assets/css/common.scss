@@ -91,9 +91,12 @@ a {
 }
 
 .page-header{
-  height: 108px;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 76px;
+  padding-top: 19px;
+  padding-bottom: 57px;
 }
 
 .page-footer{
