@@ -11,14 +11,14 @@ import {
 } from "connected-react-router";
 import { composeWithDevTools } from "redux-devtools-extension";
 import { createStore, applyMiddleware } from 'redux';
-import { createBrowserHistory } from "history";
+import { createHashHistory } from "history";
 
 import reducers from './redux/reducers';
 
 import "semantic-ui-css/semantic.min.css";
 import "./assets/css/common.scss";
 
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 const store = createStore(
   reducers(history),
