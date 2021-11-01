@@ -7,6 +7,8 @@ While there is no real server authorization, works emulation, which can be easil
 
 :white_check_mark: **To sign in without server-side, write any 5 characters for username and password!**
 
+Demo page: https://kseniyalan.github.io/react-template/
+
 Routing is configured, pages are connected to the Redux infrastructure.
 
 There are also several UI components:
