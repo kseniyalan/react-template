@@ -1,6 +1,6 @@
 # React web app template
 
-The project is a SPA web application template on the React + Redux stack and Axios as Middleware.
+The project is a SPA web application template with React.js + Redux stack and Axios as Middleware. It is based on create-react-app.
 The project contains a layout skeleton of a site with a login page with simple validation, a 404 page, a main menu, several blank pages, an authorization mechanism example.
 
 While there is no real server authorization, works emulation, which can be easily disabled.
