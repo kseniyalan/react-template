@@ -2,6 +2,7 @@
   "name": "mobile-reviewer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kseniyalan.github.io/react-template/",
   "dependencies": {
     "axios": "^0.18.0",
     "connected-react-router": "^6.4.0",
