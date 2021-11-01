@@ -1,0 +1,36 @@
+.not-found-layout{
+  position: fixed;
+  left: 208px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+
+  .not-found-wrap{
+    height: 290px;
+  }
+
+  .not-found-code, .not-found-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    color: #C4C2C2;
+    letter-spacing: 0.35px
+  }
+
+  .not-found-code{
+    font-size: 200px;
+    line-height: 234px;
+  }
+
+  .not-found-text{
+    font-size: 48px;
+    line-height: 56px;
+  }
+}

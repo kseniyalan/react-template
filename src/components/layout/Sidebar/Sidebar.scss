@@ -1,0 +1,134 @@
+@import "../../../assets/css/_colors.scss";
+
+.aside.ui.thin.left.sidebar {
+  width: 208px;
+  min-height: 420px;
+  padding: 36px 0 20px;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.sidebar-logo-wrap{
+  width: 100%;
+  height: 79px;
+  background-color: #FFF848;
+  padding: 15px;
+
+  .sidebar-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.35px;
+    line-height: 14px;
+    margin-bottom: 5px;
+    color: $lightBlueHover;
+  }
+
+  .sidebar-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+  }
+
+  .sidebar-logo{
+    width: 30px;
+    height: 30px;
+    background: url("../../../assets/images/smile.svg") center center no-repeat;
+  }
+}
+
+.nav {
+  margin-top: 100px;
+
+  li + li {
+    margin-top: 14px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 35px;
+    color: #000;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+
+    .link-wrap{
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      padding-left: 50px;
+      padding-right: 10px;
+      z-index: 2;
+
+      .right-border{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 4px;
+        height: 0;
+        background-color: $blue;
+        visibility: hidden;
+        transition: height 0.4s, top 0.4s;
+      }
+    }
+
+    .link-text{
+      z-index: 2;
+    }
+
+    &:hover{
+      color: $blue;
+    }
+
+  }
+
+  a.active{
+    font-weight: bold;
+
+    .right-border{
+      top: 0;
+      height: 100%;
+      visibility: visible;
+    }
+  }
+
+  li:hover {
+    color: $blue;
+  }
+}
+
+.sidebar-logout{
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  color: #b3b3b3;
+
+  .logout-btn {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    color: #b3b3b3;
+
+    &:hover{
+      color: $blue;
+    }
+  }
+}
+
+

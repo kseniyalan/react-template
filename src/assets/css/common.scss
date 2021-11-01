@@ -1,0 +1,152 @@
+@import "_normalize";
+@import "_colors";
+@import "_buttons.scss";
+@import "_checkbox.scss";
+@import "_forms.scss";
+@import "_modal.scss";
+@import "_swashIn.scss";
+
+
+html, body, #root, .main-content{
+  height: auto;
+  min-height: 100vh;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  min-height: auto;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  outline: none;
+}
+
+a {
+  color: #000;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #78BE20;
+  }
+}
+
+.ext-page-wrap{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 600px;
+  background-color: #fff;
+}
+
+.main-content {
+  padding-left: 258px;
+  padding-right: 50px;
+  min-width: 1440px;
+  background-color: $grayBg;
+}
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 75px;
+}
+
+.page-header{
+  height: 108px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.page-footer{
+  height: 28px;
+}
+
+.page-content{
+  position: relative;
+  padding-bottom: 40px;
+
+  &.forms{
+    min-height: 540px;
+    background-color: #fff;
+    padding: 40px 50px 70px;
+
+    .form-header, .page-btns{
+      display: flex;
+    }
+
+    .page-header{
+      justify-content: space-between;
+      margin-bottom: 64px;
+    }
+
+    .title-wrap{
+      display: flex;
+      margin-bottom: 50px;
+      overflow: hidden;
+      
+      .page-title{
+        font-weight: bold; 
+        font-size: 24px;
+        line-height: 28px;
+        color: #000;
+
+        &.simple-title{
+          font-weight: normal;
+        }
+      }
+    }
+
+  }
+}
+
+.modal-btns.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 1520px) {
+  .page-container {
+    padding-bottom: 40px;
+  }
+}

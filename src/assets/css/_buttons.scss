@@ -1,0 +1,104 @@
+button {
+  width: 197px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  font-family: inherit;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  -moz-user-focus: none;
+
+  &:focus{
+    outline: none;
+  }
+
+  &::-moz-focus-outer, ::-moz-focus-inner {
+    outline: none;
+  }
+
+  &.long{
+    width: 254px;
+  }
+ 
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring{
+  outline: none;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 12px;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: 0.35px; /* Для пагинации не будет */
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  &.disabled {
+    color: #8F8F8F;
+    background-color: $gray;
+    pointer-events: none;
+  }
+}
+
+.btn + .btn{
+  margin-left: 24px;
+}
+
+.btn-green {
+  background-color: $blue;
+
+  &:hover {
+    background-color: $lightBlueHover;
+  }
+
+  &:active {
+    background-color: $blueActive;
+  }
+
+}
+
+.btn-red {
+  background-color: $red;
+
+  &:hover {
+    background-color: $redHover;
+  }
+
+  &:active {
+    background-color: $redActive;
+  }
+}
+
+.btn-back{
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $btnsGray;
+  background-color: transparent;
+  box-shadow: none;
+  border: 1px solid $gray;
+
+  &:hover {
+    background-color: #FAF9F9;
+  } 
+
+  &:active {
+    background-color: #fff;
+  }
+}
+
+
+
