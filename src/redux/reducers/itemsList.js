@@ -35,7 +35,7 @@ export default function (state = INITIAL_STATE, action) {
         ...state,
         ready: true,
         loading: false,
-        items: action.payload.items, //For real server-side
+        items: action.payload.items.items, //For real server-side
       };
     case ITEMS_LOADING_FAILED:
       return {

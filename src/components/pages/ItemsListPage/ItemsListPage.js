@@ -39,10 +39,7 @@ class ItemsListPage extends Component {
 
   componentDidMount = () => { 
     const { getItemsList } = this.props;
-    const payload = {
-      limit: 100,
-    };
-    getItemsList(payload);
+    getItemsList();
   }
 
   renderItemsList = (item, i) => {

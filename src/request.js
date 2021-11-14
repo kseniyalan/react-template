@@ -1,16 +1,8 @@
 /* EXAMPLE OF REST-API CONNECTION */
 import axios from "axios";
-//import qs from "qs";
-import config from "./config";
 
-let domain;
-if (process.env.NODE_ENV === 'development') {
-  domain = config.devHost;
-} else {
-  domain = config.prodHost;
-}
+const baseURL = process.env.BASE_URL;
 
-export const baseURL = domain + config.prefix;
 const ax = axios.create({baseURL});
 
 /* AUTHORIZATION */
@@ -36,22 +28,14 @@ export const signInByRT = async refresh_token => {
 
 //payload contains variables for filtering
 
-export const getItemsList = async (token, payload) => {
-  /*
-  const queryString = qs.stringify(payload, {indices: false});
-  const response = await ax.get('/items?' + queryString, {
-    headers: {token}
-  });
-  */
-  //Server side emulation
-  const response = [
-    {id: 0, name: 'Item 1', color: 'Yellow'},
-    {id: 1, name: 'Item 2', color: 'Green'},
-    {id: 2, name: 'Item 3', color: 'Blue'},
-    {id: 3, name: 'Item 4', color: 'Red'},
-    {id: 4, name: 'Item 5', color: 'White'},
-  ]
-  return response;
+export const getItemsList = async () => {
+  let response;
+  try {
+    response = await ax.get('items.json');
+  } catch {
+    throw new Error('Items loading failed');
+  }
+  return response.data;
 };
 
 //Server side emulation

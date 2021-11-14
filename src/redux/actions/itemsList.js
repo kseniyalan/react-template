@@ -58,8 +58,7 @@ export const getItemsListAsync = payload => {
     //await dispatch(checkAndRenewTokens()); //For real authorization
     let items;
     try {
-      const accessToken = localStorage.getItem("accessToken");
-      items = await getItemsList(accessToken, payload);
+      items = await getItemsList();
     } catch (err) {
       dispatch(checkTokenError(err));
       dispatch(showErrorMessage("Items loading failed!"));
