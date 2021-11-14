@@ -47,6 +47,9 @@ export const getItemsList = async (token, payload) => {
   const response = [
     {id: 0, name: 'Item 1', color: 'Yellow'},
     {id: 1, name: 'Item 2', color: 'Green'},
+    {id: 2, name: 'Item 3', color: 'Blue'},
+    {id: 3, name: 'Item 4', color: 'Red'},
+    {id: 4, name: 'Item 5', color: 'White'},
   ]
   return response;
 };
